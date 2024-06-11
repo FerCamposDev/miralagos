@@ -1,13 +1,14 @@
 import 'leaflet/dist/leaflet.css';
 import houseIcon from './assets/icons/house.png';
 import { ImageOverlay, LayerGroup, LayersControl, MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import { Icon } from 'leaflet';
+import { Icon, divIcon } from 'leaflet';
 
 import LocationMarker from './components/LocationMarker';
 import AddMarker from './components/AddMarker';
+import { getThree } from './assets/icons/numbers';
 
 function App() {
-  
+
 
   return (
     <MapContainer
@@ -40,7 +41,15 @@ function App() {
         </LayersControl.Overlay>
 
         <LayersControl.Overlay name="Golf">
-          <Marker position={[-35.102127, -58.083489]} title="Hoyo 1">
+          <Marker
+            title="Hoyo 1"
+            // icon={new Icon({ iconUrl: threeIcon, iconSize: [32, 32] })}
+            icon={divIcon({
+              html: getThree(),
+              iconSize: [32, 32],
+            })}
+            position={[-35.102127, -58.083489]}
+          >
             <Popup>
               Hoyo 1
             </Popup>
