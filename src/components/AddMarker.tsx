@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import { useSearchParams } from "react-router-dom";
 import MarkerTextEditor from "./MarkerTextEditor";
+import { M_BOUNDS } from "../constants/positions";
+import { isPositionInsideLimits } from "../helpers/positions";
+import toast from "react-hot-toast";
 
 const getPositionFromSearchParams = (searchParams: URLSearchParams): LatLng | null => {
   if (!searchParams.get('lat') || !searchParams.get('lng')) {
@@ -14,7 +17,11 @@ const getPositionFromSearchParams = (searchParams: URLSearchParams): LatLng | nu
 
   if (Number.isNaN(lat) || Number.isNaN(lng)) return null;
 
-  return new LatLng(lat, lng);
+  const position = new LatLng(lat, lng);
+
+  if (isPositionInsideLimits(position, M_BOUNDS)) return position;
+
+  return null
 }
 
 const AddMarker = () => {
@@ -24,12 +31,17 @@ const AddMarker = () => {
   const [position, setPosition] = useState<LatLng | null>(getPositionFromSearchParams(searchParams));
 
   const onClickEvent = (e: LeafletMouseEvent) => {
-    setPosition(e.latlng);
+    const position = e.latlng;
+    if (isPositionInsideLimits(position, M_BOUNDS)) {
+      setPosition(e.latlng);
     
-    setSearchParams({
-      lat: e.latlng.lat.toString(),
-      lng: e.latlng.lng.toString(),
-    });
+      setSearchParams({
+        lat: e.latlng.lat.toString(),
+        lng: e.latlng.lng.toString(),
+      });
+    } else {
+      toast.error('Marcador fuera del rango permitido');
+    }
   }
 
   useEffect(() => {
