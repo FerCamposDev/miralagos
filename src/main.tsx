@@ -8,6 +8,8 @@ import {
 import App from './App.tsx';
 import { Toaster } from 'react-hot-toast';
 
+import './index.css';
+
 const router = createBrowserRouter([
   {
     path: "/",

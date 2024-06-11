@@ -47,6 +47,7 @@ function App() {
             icon={divIcon({
               html: getThree(),
               iconSize: [32, 32],
+              className: 'bg-transparent'
             })}
             position={[-35.102127, -58.083489]}
           >
