@@ -2,6 +2,7 @@ import { LatLng, LeafletMouseEvent } from "leaflet";
 import { useEffect, useState } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import { useSearchParams } from "react-router-dom";
+import MarkerTextEditor from "./MarkerTextEditor";
 
 const getPositionFromSearchParams = (searchParams: URLSearchParams): LatLng | null => {
   if (!searchParams.get('lat') || !searchParams.get('lng')) {
@@ -45,7 +46,7 @@ const AddMarker = () => {
   return (
     <Marker position={position} title="Marcador">
       <Popup>
-        Your Marker
+        <MarkerTextEditor />
       </Popup>
     </Marker>
   );
