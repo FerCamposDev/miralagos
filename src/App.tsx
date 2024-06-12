@@ -4,8 +4,6 @@ import { ImageOverlay, LayerGroup, LayersControl, MapContainer, Marker, Popup, T
 import LocationMarker from './components/LocationMarker';
 import AddMarker from './components/AddMarker';
 import { AMENITIES_MARKERS, GOLF_MARKERS, SPORTS_MARKERS } from './constants/markers';
-import { Icon } from 'leaflet';
-import locationIcon from './assets/icons/location.gif';
 
 function App() {
 
@@ -64,14 +62,6 @@ function App() {
               </Marker>
             ))}
           </LayerGroup>
-        </LayersControl.Overlay>
-
-        <LayersControl.Overlay name="You">
-          <Marker position={[-35.102633, -58.086]} title="Your position" icon={new Icon({ iconUrl: locationIcon, iconSize: [24, 24]})}>
-            <Popup>
-              Su posición actual
-            </Popup>
-          </Marker>
         </LayersControl.Overlay>
 
         <LayersControl.Overlay name="Ver Lotes">
