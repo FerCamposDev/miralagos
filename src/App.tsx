@@ -80,9 +80,8 @@ function App() {
 
         <LayersControl.Overlay name="Ver Lotes">
           <ImageOverlay
-            // url='/miralagos-r47-cut.png'
             url={lotes}
-            opacity={0.7}
+            opacity={0.9}
             bounds={[
               [-35.08919103, -58.0896666], // top left
               [-35.08919103, -58.0639085], // top right
