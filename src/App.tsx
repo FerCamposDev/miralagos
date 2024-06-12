@@ -4,7 +4,7 @@ import { ImageOverlay, LayerGroup, LayersControl, MapContainer, Marker, Popup, T
 import LocationMarker from './components/LocationMarker';
 import AddMarker from './components/AddMarker';
 import { AMENITIES_MARKERS, GOLF_MARKERS, SPORTS_MARKERS } from './constants/markers';
-import lotes from './assets/lotes.png';
+import lotes from './assets/lotes-light.png';
 
 function App() {
 
