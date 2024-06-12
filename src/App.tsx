@@ -30,14 +30,14 @@ function App() {
 
 
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; Desarrollado por <a href="https://togrow.com.ar">ToGrow</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <LocationMarker />
       <AddMarker />
 
       <LayersControl position="topright">
-        <LayersControl.Overlay name="Deportes">
+        <LayersControl.Overlay name="Deportes" checked>
           <LayerGroup>
             {SPORTS_MARKERS.map(({ icon, title, content, position }) => (
               <Marker position={position} title={title} icon={icon}>
@@ -49,7 +49,7 @@ function App() {
           </LayerGroup>
         </LayersControl.Overlay>
 
-        <LayersControl.Overlay name="Amenities">
+        <LayersControl.Overlay name="Amenities" checked>
           <LayerGroup>
             {AMENITIES_MARKERS.map(({ icon, title, content, position }) => (
               <Marker position={position} title={title} icon={icon}>
