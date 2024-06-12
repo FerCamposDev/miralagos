@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg fill="#5f99f7" height="208px" id="svg822" inkscape:version="0.92.4 (f8dce91, 2019-08-02)" sodipodi:docname="locations.svg" stroke="#5f99f7" version="1.1" viewBox="0 0 30.00 30.00" width="208px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
+  <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+  <g id="SVGRepo_iconCarrier">
+    <defs id="defs816"/>
+    <g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1" transform="translate(0,-289.0625)">
+      <path d="M 15 3 C 8.3844276 3 3 8.38443 3 15 C 3 21.61557 8.3844276 27 15 27 C 21.615572 27 27 21.61557 27 15 C 27 8.38443 21.615572 3 15 3 z M 15 5 C 20.534692 5 25 9.46531 25 15 C 25 20.53469 20.534692 25 15 25 C 9.4653079 25 5 20.53469 5 15 C 5 9.46531 9.4653079 5 15 5 z M 15 9 A 6 6 0 0 0 9 15 A 6 6 0 0 0 15 21 A 6 6 0 0 0 21 15 A 6 6 0 0 0 15 9 z " id="path861" style="opacity:1;fill:#5f99f7;fill-opacity:1;stroke-width:1.95;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="translate(0,289.0625)"/>
+    </g>
+    <metadata id="metadata819">
+      <rdf:rdf>
+        <cc:work rdf:about="">
+          <dc:format>image/svg+xml</dc:format>
+          <dc:title> </dc:title>
+          <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        </cc:work>
+      </rdf:rdf>
+    </metadata>
+    <sodipodi:namedview bordercolor="#666666" borderopacity="1.0" id="base" inkscape:current-layer="layer1" inkscape:cx="15" inkscape:cy="15" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="713" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:window-x="0" inkscape:window-y="0" inkscape:zoom="17.833333" pagecolor="#ffffff" showgrid="true" showguides="false" units="px">
+      <inkscape:grid id="grid816" type="xygrid"/>
+    </sodipodi:namedview>
+  </g>
+  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
