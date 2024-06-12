@@ -11,10 +11,23 @@ function App() {
   return (
     <MapContainer
       center={[-35.100476, -58.077903]}
+      maxBounds={[
+        [-35.089321, -58.090081],
+        [-35.089321, -58.065955],
+        [-35.109903, -58.065955],
+        [-35.109903, -58.090081],
+      ]}
       zoom={15.5}
       scrollWheelZoom={false}
       style={{ height: '100vh' }}
     >
+      {/* Map Bounds */}
+      {/* <Marker position={[-35.089321, -58.090081]} /> */}
+      {/* <Marker position={[-35.089321, -58.065955]} /> */}
+      {/* <Marker position={[-35.109903, -58.065955]} /> */}
+      {/* <Marker position={[-35.109903, -58.090081]} /> */}
+
+
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -34,7 +47,7 @@ function App() {
             ))}
           </LayerGroup>
         </LayersControl.Overlay>
-        
+
         <LayersControl.Overlay name="Amenities">
           <LayerGroup>
             {AMENITIES_MARKERS.map(({ icon, title, content, position }) => (
@@ -64,14 +77,20 @@ function App() {
           </LayerGroup>
         </LayersControl.Overlay>
 
+        {/* <Marker position={[-35.08919103, -58.0896666]} /> */}
+        {/* <Marker position={[-35.08919103, -58.0639085]} /> */}
+        {/* <Marker position={[-35.11036208, -58.0639085]} /> */}
+        {/* <Marker position={[-35.11036208, -58.0896666]} /> */}
+
         <LayersControl.Overlay name="Ver Lotes">
           <ImageOverlay
             url='/miralagos-r47-cut.png'
+            opacity={0.7}
             bounds={[
-              [-35.104571, -58.089652], // top left
-              [-35.089060, -58.072578], // top right
-              [-35.095009, -58.064285], // bottom right
-              [-35.110012, -58.082277], // bottom left
+              [-35.08919103, -58.0896666], // top left
+              [-35.08919103, -58.0639085], // top right
+              [-35.11036208, -58.0639085], // bottom right
+              [-35.11036208, -58.0896666], // bottom left
             ]}
           />
         </LayersControl.Overlay>
