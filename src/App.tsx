@@ -4,6 +4,7 @@ import { ImageOverlay, LayerGroup, LayersControl, MapContainer, Marker, Popup, T
 import LocationMarker from './components/LocationMarker';
 import AddMarker from './components/AddMarker';
 import { AMENITIES_MARKERS, GOLF_MARKERS, SPORTS_MARKERS } from './constants/markers';
+import lotes from './assets/lotes.png';
 
 function App() {
 
@@ -77,14 +78,10 @@ function App() {
           </LayerGroup>
         </LayersControl.Overlay>
 
-        {/* <Marker position={[-35.08919103, -58.0896666]} /> */}
-        {/* <Marker position={[-35.08919103, -58.0639085]} /> */}
-        {/* <Marker position={[-35.11036208, -58.0639085]} /> */}
-        {/* <Marker position={[-35.11036208, -58.0896666]} /> */}
-
         <LayersControl.Overlay name="Ver Lotes">
           <ImageOverlay
-            url='/miralagos-r47-cut.png'
+            // url='/miralagos-r47-cut.png'
+            url={lotes}
             opacity={0.7}
             bounds={[
               [-35.08919103, -58.0896666], // top left
@@ -94,6 +91,10 @@ function App() {
             ]}
           />
         </LayersControl.Overlay>
+        {/* <Marker position={[-35.08919103, -58.0896666]} /> */}
+        {/* <Marker position={[-35.08919103, -58.0639085]} /> */}
+        {/* <Marker position={[-35.11036208, -58.0639085]} /> */}
+        {/* <Marker position={[-35.11036208, -58.0896666]} /> */}
 
       </LayersControl>
 
